@@ -1,0 +1,61 @@
+<h1 style="margin-left: 400px; color: white">Student Management Database</h1>
+<div>
+  <span style="color: white">Total Number :{{ quatity }}</span>
+  <!-- Add Student Button -->
+  <button
+    nz-button
+    [nzType]="'primary'"
+    (click)="showAddStudent()"
+    style="float: right"
+  >
+    <span>Add New Student</span>
+  </button>
+</div>
+<br /><br />
+<!--Student table -->
+<div>
+  <nz-table #basicTable [nzData]="students">
+    <thead>
+      <tr>
+        <th style="text-align: center;">ID</th>
+        <th style="text-align: center;">NAME</th>
+        <th style="text-align: center;">SUBJECT</th>
+        <th style="text-align: center;">GRADE</th>
+        <th style="text-align: center;">ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data">
+        <td>{{ data.id }}</td>
+        <td>{{ data.name }}</td>
+        <td>{{ data.subject }}</td>
+        <td>{{ data.Grade }}</td>
+        <td>
+          <!-- Update Student Button -->
+          <button nz-button nzType="text" (click)="showEditStudent(data.id)">
+            <span>Edit</span>
+          </button>
+          <!-- Delete student Button -->
+          <a
+            nz-popconfirm
+            nzPopconfirmTitle="Are you sure delete this Student?"
+            nzPopconfirmPlacement="top"
+            (nzOnConfirm)="confirm(data.id)"
+            (nzOnCancel)="cancel()"
+            nz-button nzType="text" nzDanger
+          >
+            Delete
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
+</div>
+<button
+  nz-button
+  nzType="primary"
+  style="background-color: yellow; color: black; margin-left: 600px"
+  (click)="logout()"
+>
+  Logout
+</button>

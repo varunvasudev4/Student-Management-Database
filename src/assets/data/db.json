@@ -1,0 +1,34 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Gopinath",
+      "subject": "Computer Science",
+      "Grade": "A"
+    },
+    {
+      "id": 2,
+      "name": "Vishal",
+      "subject": "Mathematics",
+      "Grade": "B"
+    },
+    {
+      "id": 4,
+      "name": "Srini",
+      "subject": "Pysics and Computer Science",
+      "Grade": "B"
+    },
+    {
+      "id": 5,
+      "name": "Thiru",
+      "subject": "Physics and Chemistry",
+      "Grade": "B"
+    },
+    {
+      "id": 11,
+      "name": "Maxwell",
+      "subject": "Biology",
+      "Grade": "A"
+    }
+  ]
+}

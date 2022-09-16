@@ -1,0 +1,26 @@
+<nz-card style="width:300px;" nzTitle="Edit Student" class="vertical-center" style="margin-left:500px">
+    <form [formGroup]="formValue">
+        <input
+          nz-input
+          placeholder="Name"
+          formControlName="name"
+        /><br /><br />
+        <input
+          nz-input
+          placeholder="Subject"
+          formControlName="subject"
+        /><br /><br />
+        <label for="">Grade &nbsp;</label>
+        <nz-radio-group formControlName="grade" nzSize="small">
+          <label nz-radio-button nzValue="A">A</label>
+          <label nz-radio-button nzValue="B">B</label>
+          <label nz-radio-button nzValue="C">C</label>
+          <label nz-radio-button nzValue="D">D</label>
+        </nz-radio-group>
+      </form><br />
+      <div style="float: right;">
+          <button nz-button nzType="default" (click)="onCancel()">Cancel</button>&nbsp;
+          <button nz-button nzType="primary" (click)="editStudent()" [disabled]="formValue.invalid">Save</button>
+      </div>
+    
+</nz-card>
