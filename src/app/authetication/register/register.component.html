@@ -1,0 +1,57 @@
+<nz-card style="width: 400px" class="vertical-center">
+    <form
+      nz-form
+      [formGroup]="validateForm"
+      class="login-form"
+      (ngSubmit)="signup()"
+    >
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your email!">
+          <nz-input-group nzPrefixIcon="mail">
+            <input
+              type="text"
+              nz-input
+              formControlName="email"
+              placeholder="Email"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your phone number!">
+          <nz-input-group nzPrefixIcon="phone">
+            <input
+              type="text"
+              nz-input
+              formControlName="phone"
+              placeholder="Phone Number"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <nz-input-group nzPrefixIcon="lock">
+            <input
+              type="password"
+              nz-input
+              formControlName="password"
+              placeholder="Password"
+            />
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <br>
+      <button
+        nz-button
+        nzType="primary"
+        (click)="signup()"
+        type="button"
+        [disabled]="validateForm.invalid"
+      >
+        Signup
+      </button>
+      &nbsp;Or&nbsp;
+    <a (click)="toLogin()">Login</a>
+    </form>
+  </nz-card>

@@ -25,8 +25,180 @@
       </tr>
     </thead>
     <tbody>
+        <tr *ngIf="loadSkeleton">
+          <td>
+            <nz-skeleton-element
+              nzType="avatar"
+              [nzActive]="true"
+              [nzSize]="avatarSize"
+              [nzShape]="avatarShape"
+           ></nz-skeleton-element>
+          </td>
+          <td>
+          <nz-skeleton-element
+              nzType="input"
+              [nzActive]="true"
+              [nzSize]="inputSize"
+              style="width:100px"
+          ></nz-skeleton-element>
+          </td>
+          <td>
+            <nz-skeleton-element
+              nzType="input"
+              [nzActive]="true"
+              [nzSize]="inputSize"
+              style="width:100px"
+          ></nz-skeleton-element>
+          </td>
+          <td>
+            <nz-skeleton-element
+              nzType="avatar"
+              [nzActive]="true"
+              [nzSize]="avatarSize"
+              [nzShape]="avatarShape"
+           ></nz-skeleton-element>
+          </td>
+          <td style="padding :5px 50px 5px 0px">
+            <nz-skeleton-element
+              nzType="avatar"
+              [nzActive]="true"
+              [nzSize]="avatarSize"
+              [nzShape]="avatarShape"
+           ></nz-skeleton-element>
+           &nbsp;&nbsp;&nbsp;
+           <nz-skeleton-element
+              nzType="avatar"
+              [nzActive]="true"
+              [nzSize]="avatarSize"
+              [nzShape]="avatarShape"
+           ></nz-skeleton-element>
+           &nbsp;&nbsp;&nbsp;
+           <nz-skeleton-element
+              nzType="avatar"
+              [nzActive]="true"
+              [nzSize]="avatarSize"
+              [nzShape]="avatarShape"
+           ></nz-skeleton-element>
+          </td>
+      </tr>
+      <tr *ngIf="loadSkeleton">
+        <td>
+          <nz-skeleton-element
+            nzType="avatar"
+            [nzActive]="true"
+            [nzSize]="avatarSize"
+            [nzShape]="avatarShape"
+         ></nz-skeleton-element>
+        </td>
+        <td>
+        <nz-skeleton-element
+            nzType="input"
+            [nzActive]="true"
+            [nzSize]="inputSize"
+            style="width:100px"
+        ></nz-skeleton-element>
+        </td>
+        <td>
+          <nz-skeleton-element
+            nzType="input"
+            [nzActive]="true"
+            [nzSize]="inputSize"
+            style="width:100px"
+        ></nz-skeleton-element>
+        </td>
+        <td>
+          <nz-skeleton-element
+            nzType="avatar"
+            [nzActive]="true"
+            [nzSize]="avatarSize"
+            [nzShape]="avatarShape"
+         ></nz-skeleton-element>
+        </td>
+        <td style="padding :5px 50px 5px 0px">
+          <nz-skeleton-element
+            nzType="avatar"
+            [nzActive]="true"
+            [nzSize]="avatarSize"
+            [nzShape]="avatarShape"
+         ></nz-skeleton-element>
+         &nbsp;&nbsp;&nbsp;
+         <nz-skeleton-element
+            nzType="avatar"
+            [nzActive]="true"
+            [nzSize]="avatarSize"
+            [nzShape]="avatarShape"
+         ></nz-skeleton-element>
+         &nbsp;&nbsp;&nbsp;
+         <nz-skeleton-element
+            nzType="avatar"
+            [nzActive]="true"
+            [nzSize]="avatarSize"
+            [nzShape]="avatarShape"
+         ></nz-skeleton-element>
+        </td>
+    </tr>
+    <tr *ngIf="loadSkeleton">
+      <td>
+        <nz-skeleton-element
+          nzType="avatar"
+          [nzActive]="true"
+          [nzSize]="avatarSize"
+          [nzShape]="avatarShape"
+       ></nz-skeleton-element>
+      </td>
+      <td>
+      <nz-skeleton-element
+          nzType="input"
+          [nzActive]="true"
+          [nzSize]="inputSize"
+          style="width:100px"
+      ></nz-skeleton-element>
+      </td>
+      <td>
+        <nz-skeleton-element
+          nzType="input"
+          [nzActive]="true"
+          [nzSize]="inputSize"
+          style="width:100px"
+      ></nz-skeleton-element>
+      </td>
+      <td>
+        <nz-skeleton-element
+          nzType="avatar"
+          [nzActive]="true"
+          [nzSize]="avatarSize"
+          [nzShape]="avatarShape"
+       ></nz-skeleton-element>
+      </td>
+      <td style="padding :5px 50px 5px 0px">
+        <nz-skeleton-element
+          nzType="avatar"
+          [nzActive]="true"
+          [nzSize]="avatarSize"
+          [nzShape]="avatarShape"
+       ></nz-skeleton-element>
+       &nbsp;&nbsp;&nbsp;
+       <nz-skeleton-element
+          nzType="avatar"
+          [nzActive]="true"
+          [nzSize]="avatarSize"
+          [nzShape]="avatarShape"
+       ></nz-skeleton-element>
+       &nbsp;&nbsp;&nbsp;
+       <nz-skeleton-element
+          nzType="avatar"
+          [nzActive]="true"
+          [nzSize]="avatarSize"
+          [nzShape]="avatarShape"
+       ></nz-skeleton-element>
+      </td>
+  </tr>
+      
+
       <tr *ngFor="let data of basicTable.data">
-        <td>{{ data.id }}</td>
+        <td>
+          {{ data.id }}
+        </td>
         <td>{{ data.name }}</td>
         <td>{{ data.subject }}</td>
         <td>{{ data.Grade }}</td>
@@ -46,6 +218,9 @@
           >
             Delete
           </a>
+          <button nz-button nzType="text" (click)="call()">
+            <span><i class="fa-solid fa-phone"></i></span>
+          </button>
         </td>
       </tr>
     </tbody>

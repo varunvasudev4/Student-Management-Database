@@ -13,6 +13,9 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
+import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzSpaceModule } from 'ng-zorro-antd/space';
 
 
 @NgModule({
@@ -32,7 +35,11 @@ import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
     NzRadioModule,
     NzTableModule,
     NzCardModule,
-    NzPopconfirmModule
+    NzPopconfirmModule,
+    NzSkeletonModule,
+    NzGridModule,
+    NzSpaceModule
+
   ]
 })
 export class CrudModule { }

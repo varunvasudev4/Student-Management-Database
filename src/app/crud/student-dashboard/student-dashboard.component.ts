@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { StudentService } from 'src/app/utils/student-service/student.service';
 import { StudentData } from '../model/students-model';
+import {NzSkeletonAvatarShape,NzSkeletonAvatarSize,NzSkeletonInputSize} from 'ng-zorro-antd/skeleton';
 
 @Component({
   selector: 'app-student-dashboard',
@@ -20,6 +21,13 @@ export class StudentDashboardComponent implements OnInit {
 
   constructor(private studentservice:StudentService,private fb:FormBuilder,private router:Router) { }
 
+
+  loadSkeleton : boolean = true
+  avatarShape : NzSkeletonAvatarShape="square"
+  avatarSize : NzSkeletonAvatarSize ="default"
+  inputSize: NzSkeletonInputSize = "default"
+
+
   ngOnInit(): void {
     this.formValue = this.fb.group({
       name: ['',Validators.required],
@@ -32,9 +40,12 @@ export class StudentDashboardComponent implements OnInit {
   getStudents(){
     this.studentservice.getStudents().subscribe(res=>{
       this.students=res;
-      this.quatity=this.students.length
+      this.quatity=this.students.length 
+      this.loadSkeleton=false
     })
+    
   }
+
   deleteStudent(id:any){
     this.studentservice.deleteStudent(id).subscribe(res=>{
       alert("Deleted Successfully")
@@ -62,6 +73,9 @@ export class StudentDashboardComponent implements OnInit {
   }
   cancel(){
 
+  }
+
+  call(){
   }
 
 
